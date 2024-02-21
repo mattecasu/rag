@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "rag"
+version = "0.1.0"
+description = ""
+authors = ["mattecasu <mattecasu@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "rag" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+langchain = "^0.1.7"
+chromadb = "^0.4.22"
+pypdf = "^4.0.2"
+langchainhub = "^0.1.14"
+transformers = "^4.38.0"
+pytest = "^8.0.1"
+sentence-transformers = "^2.3.1"
+ragatouille = "^0.0.7.post3"
+srsly = "^2.4.8"
+streamlit = "^1.31.1"
+docx2txt = "^0.8"
+unstructured = { extras = ["all-docs"], version = "^0.12.4" }
+python-docx = "^1.1.0"
+watchdog = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
