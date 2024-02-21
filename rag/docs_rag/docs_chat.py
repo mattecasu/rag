@@ -20,8 +20,7 @@ utils.get_ui(
         config={
             "configurable": {"session_id": "foobar"},
             "callbacks": [
-                utils.PromptsPrinterHandler(),
-                utils.MaxHistoryHandler(max_messages=3),
+                utils.PromptsPrinterHandler()
             ]
         }
     )
