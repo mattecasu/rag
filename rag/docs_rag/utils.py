@@ -40,7 +40,7 @@ def get_ui(generate_output):
         st.chat_message("user").write(text)
         with st.spinner("🤔..."):
             answer, answer_to_store = itertools.tee(generate_output(text))
-            st.chat_message("assistant").write(answer)
+            st.chat_message("assistant").write_stream(answer)
         stored_answer = ''.join(answer_to_store)
         st.session_state.messages.append({"role": "user", "content": text})
         st.session_state.messages.append({"role": "assistant", "content": stored_answer})
