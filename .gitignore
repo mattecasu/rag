@@ -50,7 +50,7 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-poetry.lock
+#poetry.lock
 
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
