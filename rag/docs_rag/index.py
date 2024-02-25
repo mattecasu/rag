@@ -1,6 +1,6 @@
 import os
 
-from rag.docs_rag.chroma_indexer import ChromaIndexer
+from chroma_indexer import ChromaIndexer
 
 RAGS_DOCS_FOLDER = os.path.expanduser('~') + "/Desktop/RAG_pdfs/"
 CHROMA_DIR = os.path.expanduser('~') + "/Desktop/chroma"
