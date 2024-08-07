@@ -54,7 +54,7 @@ chunks_retriever = indexer.chroma_store.as_retriever(
 rag_chain = (
         {
             "chunks": itemgetter("input")
-                      | utils.wrap_in_colbert(chunks_retriever, k=8)
+                      | utils.get_compressor_wrapper(chunks_retriever, 8)
                       | utils.format_chunks_by_file,
             "question": itemgetter("input")
                         | RunnablePassthrough(),

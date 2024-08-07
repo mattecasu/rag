@@ -4,10 +4,11 @@ from typing import Dict, List, Any, Iterable
 
 import streamlit as st
 from langchain.retrievers import ContextualCompressionRetriever
+from langchain.retrievers.document_compressors import EmbeddingsFilter
+from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_core.callbacks import BaseCallbackHandler
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
-from ragatouille import RAGPretrainedModel
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -21,12 +22,12 @@ class PromptsPrinterHandler(BaseCallbackHandler):
         print(f"Prompt:\n{formatted_prompts}")
 
 
-def wrap_in_colbert(base_retriever, k=5) -> BaseRetriever:
+def get_compressor_wrapper(base_retriever, limit, compression_model="colbert-ir/colbertv2.0") -> BaseRetriever:
     return ContextualCompressionRetriever(
-        base_compressor=RAGPretrainedModel
-        .from_pretrained("colbert-ir/colbertv2.0")
-        .as_langchain_document_compressor(k=k),
-        base_retriever=base_retriever
+        base_compressor=EmbeddingsFilter(
+            embeddings=SentenceTransformerEmbeddings(model_name=compression_model),
+            k=limit
+        ), base_retriever=base_retriever
     )
 
 

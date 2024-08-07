@@ -8,20 +8,20 @@ packages = [{ include = "rag" }]
 
 [tool.poetry.dependencies]
 python = ">=3.11,<3.12"
-langchain = "^0.1.12"
-chromadb = "^0.4.24"
-pypdf = "^4.1.0"
-langchainhub = "^0.1.15"
-transformers = "^4.38.2"
-pytest = "^8.1.1"
-sentence-transformers = "^2.5.1"
-ragatouille = "^0.0.7.post10"
+langchain = "^0.2.12"
+chromadb = "^0.5.5"
+pypdf = "^4.3.1"
+langchainhub = "^0.1.20"
+transformers = "^4.44.0"
+pytest = "^8.3.2"
+sentence-transformers = "^3.0.1"
 srsly = "^2.4.8"
-streamlit = "^1.32.2"
+streamlit = "^1.37.1"
 docx2txt = "^0.8"
-unstructured = {extras = ["all-docs"], version = "^0.12.5"}
-python-docx = "^1.1.0"
-watchdog = "^4.0.0"
+unstructured = {extras = ["all-docs"], version = "^0.15.1"}
+python-docx = "^1.1.2"
+watchdog = "^4.0.1"
+langchain-community = "^0.2.11"
 
 
 [build-system]
