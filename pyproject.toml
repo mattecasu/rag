@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "rag" }]
 
 [tool.poetry.dependencies]
-python = ">=3.11,<3.12"
+python = "^3.11,<3.13"
 langchain = "^0.2.12"
 chromadb = "^0.5.5"
 pypdf = "^4.3.1"
@@ -22,6 +22,7 @@ unstructured = {extras = ["all-docs"], version = "^0.15.1"}
 python-docx = "^1.1.2"
 watchdog = "^4.0.1"
 langchain-community = "^0.2.11"
+onnx = "^1.16.2"
 
 
 [build-system]
