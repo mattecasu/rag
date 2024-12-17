@@ -38,7 +38,7 @@ Never answer with queries or code. Never make up answers
 """)
 
 chat_llm = ChatOllama(
-    model="mistral-nemo",
+    model="mistral",
     temperature=1,
     cache=False
 )
