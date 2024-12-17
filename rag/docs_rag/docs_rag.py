@@ -2,20 +2,17 @@ import logging
 import os
 from operator import itemgetter
 
+from index import CHROMA_DIR, CHROMA_COLLECTION_NAME
 from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_community.chat_models import ChatOllama
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
-
+from langchain_ollama import ChatOllama
 from rag.docs_rag import utils, history
 from rag.docs_rag.chroma_indexer import ChromaIndexer
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
-
-CHROMA_DIR = os.path.expanduser('~') + "/Desktop/chroma"
-CHROMA_COLLECTION_NAME = "rag_demo"
 
 indexer = ChromaIndexer(CHROMA_DIR, CHROMA_COLLECTION_NAME)
 
@@ -41,7 +38,7 @@ Never answer with queries or code. Never make up answers
 """)
 
 chat_llm = ChatOllama(
-    model="mistral",
+    model="mistral-nemo",
     temperature=1,
     cache=False
 )

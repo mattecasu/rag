@@ -1,13 +1,12 @@
 from operator import itemgetter
 
-from langchain_community.chat_message_histories import ChatMessageHistory
-from langchain_community.chat_models import ChatOllama
+from langchain_community.chat_message_histories.in_memory import ChatMessageHistory
 from langchain_core.chat_history import BaseChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_core.runnables.history import RunnableWithMessageHistory
-
+from langchain_ollama import ChatOllama
 from rag.docs_rag import utils
 
 

@@ -2,7 +2,7 @@ import os
 
 from chroma_indexer import ChromaIndexer
 
-RAGS_DOCS_FOLDER = os.path.expanduser('~') + "/Desktop/RAG_pdfs/"
+RAGS_DOCS_FOLDER = os.path.expanduser('~') + "/Desktop/rag/"
 CHROMA_DIR = os.path.expanduser('~') + "/Desktop/chroma"
 CHROMA_COLLECTION_NAME = "rag_demo"
 

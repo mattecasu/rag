@@ -4,8 +4,8 @@ from typing import List
 
 import chromadb
 from chromadb import Settings
-from langchain_chroma import Chroma
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_chroma import Chroma
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_community.embeddings import SentenceTransformerEmbeddings
 from langchain_core.documents import Document
@@ -45,7 +45,7 @@ class ChromaIndexer:
             documents=chunks,
             embedding=embedding_model,
             persist_directory=self.chroma_dir)
-        chroma.persist()
+        # chroma.persist()
 
     def get_chunks(self, separators: List[str], file_path, chunk_size=300, chunk_overlap=20) -> List[
         Document]:
