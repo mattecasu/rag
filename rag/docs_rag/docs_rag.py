@@ -1,13 +1,13 @@
 import logging
-import os
 from operator import itemgetter
 
-from index import CHROMA_DIR, CHROMA_COLLECTION_NAME
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_ollama import ChatOllama
+
+from index import CHROMA_DIR, CHROMA_COLLECTION_NAME
 from rag.docs_rag import utils, history
 from rag.docs_rag.chroma_indexer import ChromaIndexer
 
