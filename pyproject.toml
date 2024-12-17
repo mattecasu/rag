@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{ include = "rag" }]
 
 [tool.poetry.dependencies]
-python = ">=3.11,<=3.12.3"
+python = ">=3.11,<=3.12.8"
 langchain = "^0.3.9"
 pypdf = "^5.1.0"
 langchainhub = "^0.1.20"
@@ -23,7 +23,6 @@ watchdog = "^6.0.0"
 langchain-community = "^0.3.9"
 langchain-chroma = "^0.1.4"
 langchain-ollama = "^0.2.1"
-onnx = "^1.16.2"
 
 
 [build-system]
