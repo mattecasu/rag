@@ -21,7 +21,7 @@ unstructured = { extras = ["all-docs"], version = "^0.16.11" }
 python-docx = "^1.1.2"
 watchdog = "^6.0.0"
 langchain-community = "^0.3.9"
-langchain-chroma = "^0.1.4"
+langchain-chroma = ">=0.1.4,<0.3.0"
 langchain-ollama = "^0.2.1"
 
 
