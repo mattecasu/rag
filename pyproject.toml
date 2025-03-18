@@ -9,7 +9,7 @@ packages = [{ include = "rag" }]
 [tool.poetry.dependencies]
 python = ">=3.11,<=3.12.8"
 langchain = "^0.3.20"
-pypdf = "^5.3.1"
+pypdf = "^5.4.0"
 langchainhub = "^0.1.20"
 transformers = "^4.49.0"
 pytest = "^8.3.5"
