@@ -17,7 +17,7 @@ sentence-transformers = "^3.0.1"
 srsly = "^2.4.8"
 streamlit = "^1.43.2"
 docx2txt = "^0.9"
-unstructured = { extras = ["all-docs"], version = "^0.17.0" }
+unstructured = { extras = ["all-docs"], version = "^0.17.2" }
 python-docx = "^1.1.2"
 watchdog = "^6.0.0"
 langchain-community = "^0.3.19"
