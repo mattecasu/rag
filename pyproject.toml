@@ -20,7 +20,7 @@ docx2txt = "^0.9"
 unstructured = { extras = ["all-docs"], version = "^0.17.2" }
 python-docx = "^1.1.2"
 watchdog = "^6.0.0"
-langchain-community = "^0.3.19"
+langchain-community = "^0.3.21"
 langchain-chroma = "^0.1.4"
 langchain-ollama = "^0.3.2"
 
