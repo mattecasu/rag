@@ -15,7 +15,7 @@ transformers = "^4.51.3"
 pytest = "^8.3.5"
 sentence-transformers = "^3.0.1"
 srsly = "^2.4.8"
-streamlit = "^1.43.2"
+streamlit = "^1.45.0"
 docx2txt = "^0.9"
 unstructured = { extras = ["all-docs"], version = "^0.17.2" }
 python-docx = "^1.1.2"
